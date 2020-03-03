@@ -52,6 +52,7 @@ We will improve new versions for our project since we achieve version 1.0.
 
 ## Our accounts wiht personal repositories
      
+- **[Arturo Alba Sánchez-Mayoral](https://github.com/ArtySaurio)**  
 - **[Héctor Palencia Sánchez](https://github.com/HectorSkm)**      
 - **[Diego Vicente Vila](https://github.com/XiluD)**  
 - **[Francisco Afán Rodríguez](https://github.com/N3oZ3r0)**   
