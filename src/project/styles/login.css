@@ -21,3 +21,12 @@
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0), 0, 0, 0, 0);
     -fx-translate-y: 4px;
  }
+ .exit{
+    -fx-border-color: transparent;
+    -fx-border-width: 2;
+ }
+ .exit:hover{
+    -fx-border-color: gray;
+    -fx-scale-x:1.2;
+    -fx-scale-y:1.2;
+ }

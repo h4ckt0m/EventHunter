@@ -12,22 +12,26 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="panel1" stylesheets="@../styles/login.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="panel1" stylesheets="@../styles/login.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controllers.ControllerLogin">
    <children>
       <VBox alignment="CENTER" layoutX="443.0" layoutY="182.0" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox alignment="CENTER" fillHeight="false" prefHeight="720.0" prefWidth="1280.0">
                <children>
-                  <VBox alignment="TOP_CENTER" prefHeight="565.0" prefWidth="440.0" styleClass="loginPane">
+                  <VBox fx:id="logForm" alignment="TOP_CENTER" prefHeight="565.0" prefWidth="440.0" styleClass="loginPane">
                      <children>
-                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../resources/cross.png" />
-                           </image>
+                        <Label onMouseClicked="#exit" styleClass="exit">
                            <VBox.margin>
                               <Insets left="380.0" top="15.0" />
                            </VBox.margin>
-                        </ImageView>
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/cross.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
                         <Label text="Login">
                            <font>
                               <Font name="Perpetua Bold" size="35.0" />
