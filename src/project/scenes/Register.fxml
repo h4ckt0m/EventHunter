@@ -32,20 +32,46 @@
                               </ImageView>
                            </graphic>
                         </Label>
-                        <Label fx:id="lbLogin" text="Login">
+                        <Label text="Sign Up">
                            <font>
                               <Font name="Perpetua Bold" size="35.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="23.0" prefWidth="87.0" text="Username" textAlignment="JUSTIFY" textFill="#484848" wrapText="true">
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="51.0" text="Email" textAlignment="JUSTIFY" textFill="#484848" wrapText="true">
                            <font>
                               <Font name="Perpetua Bold" size="20.0" />
                            </font>
                            <VBox.margin>
-                              <Insets right="225.0" top="75.0" />
+                              <Insets right="250.0" top="10.0" />
                            </VBox.margin>
                         </Label>
-                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="440.0">
+                        <HBox alignment="CENTER" prefHeight="32.0" prefWidth="440.0">
+                           <children>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/email.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </ImageView>
+                              <TextField prefHeight="30.0" prefWidth="276.0" promptText="Type your email" styleClass="textField">
+                                 <font>
+                                    <Font name="Perpetua Bold" size="15.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <Line endX="70.29289245605469" startX="-226.0" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="89.0" text="Username" textAlignment="JUSTIFY" textFill="#484848" wrapText="true">
+                           <font>
+                              <Font name="Perpetua Bold" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets right="210.0" top="30.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="32.0" prefWidth="440.0">
                            <children>
                               <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -55,7 +81,7 @@
                                     <Insets />
                                  </HBox.margin>
                               </ImageView>
-                              <TextField prefHeight="31.0" prefWidth="291.0" promptText="Type your username" styleClass="textField">
+                              <TextField prefHeight="30.0" prefWidth="276.0" promptText="Choose username" styleClass="textField">
                                  <font>
                                     <Font name="Perpetua Bold" size="15.0" />
                                  </font>
@@ -63,15 +89,15 @@
                            </children>
                         </HBox>
                         <Line endX="70.29289245605469" startX="-226.0" />
-                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="23.0" prefWidth="87.0" text="Password" textAlignment="JUSTIFY" textFill="#484848" wrapText="true">
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="84.0" text="Password" textAlignment="JUSTIFY" textFill="#484848" wrapText="true">
                            <font>
                               <Font name="Perpetua Bold" size="20.0" />
                            </font>
                            <VBox.margin>
-                              <Insets right="225.0" top="35.0" />
+                              <Insets right="210.0" top="30.0" />
                            </VBox.margin>
                         </Label>
-                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="440.0">
+                        <HBox alignment="CENTER" prefHeight="32.0" prefWidth="440.0">
                            <children>
                               <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -81,7 +107,7 @@
                                     <Insets />
                                  </HBox.margin>
                               </ImageView>
-                              <TextField prefHeight="31.0" prefWidth="291.0" promptText="Type your password" styleClass="textField">
+                              <TextField prefHeight="30.0" prefWidth="276.0" promptText="Choose password" styleClass="textField">
                                  <font>
                                     <Font name="Perpetua Bold" size="15.0" />
                                  </font>
@@ -89,15 +115,33 @@
                            </children>
                         </HBox>
                         <Line endX="70.29289245605469" startX="-226.0" />
-                        <Label text="Forgot password?">
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="159.0" text="Confirm password" textAlignment="JUSTIFY" textFill="#484848" wrapText="true">
                            <font>
-                              <Font name="Perpetua Bold" size="15.0" />
+                              <Font name="Perpetua Bold" size="20.0" />
                            </font>
                            <VBox.margin>
-                              <Insets left="190.0" top="20.0" />
+                              <Insets right="140.0" top="30.0" />
                            </VBox.margin>
                         </Label>
-                        <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="180.0" text="LOGIN" textFill="WHITE">
+                        <HBox alignment="CENTER" prefHeight="32.0" prefWidth="440.0">
+                           <children>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/lock.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </ImageView>
+                              <TextField prefHeight="30.0" prefWidth="276.0" promptText="Re-enter password" styleClass="textField">
+                                 <font>
+                                    <Font name="Perpetua Bold" size="15.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <Line endX="70.29289245605469" startX="-226.0" />
+                        <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="180.0" text="SIGN UP" textFill="WHITE">
                            <font>
                               <Font name="Perpetua Bold" size="18.0" />
                            </font>

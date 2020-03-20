@@ -19,24 +19,24 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ControllerLogin implements Initializable {
+public class ControllerRegister implements Initializable {
     @FXML
-    private VBox logForm;
+    private VBox RegForm;
     double tx = Main.stage.getScene().getWidth()/2;
     double ty = Main.stage.getScene().getHeight()/2;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        logForm.setTranslateX(tx);
-        logForm.setTranslateY(-ty);
-        logForm.setScaleX(0);
-        logForm.setScaleY(0);
+        RegForm.setTranslateX(tx);
+        RegForm.setTranslateY(-ty);
+        RegForm.setScaleX(0);
+        RegForm.setScaleY(0);
 
-        TranslateTransition translateTransition = new TranslateTransition(Duration.millis(500), logForm);
+        TranslateTransition translateTransition = new TranslateTransition(Duration.millis(500), RegForm);
         translateTransition.setByX(-tx);
         translateTransition.setByY(ty);
         translateTransition.play();
 
-        ScaleTransition scaleTransition = new ScaleTransition(Duration.millis(500), logForm);
+        ScaleTransition scaleTransition = new ScaleTransition(Duration.millis(500), RegForm);
         scaleTransition.setByX(1);
         scaleTransition.setByY(1);
         scaleTransition.play();
@@ -46,12 +46,12 @@ public class ControllerLogin implements Initializable {
     public void exit(){
         tx = Main.stage.getScene().getWidth()/2;
         ty = Main.stage.getScene().getHeight()/2;
-        TranslateTransition translateTransition = new TranslateTransition(Duration.millis(500), logForm);
+        TranslateTransition translateTransition = new TranslateTransition(Duration.millis(500), RegForm);
         translateTransition.setByX(tx);
         translateTransition.setByY(-ty);
         translateTransition.play();
 
-        ScaleTransition scaleTransition = new ScaleTransition(Duration.millis(500), logForm);
+        ScaleTransition scaleTransition = new ScaleTransition(Duration.millis(500), RegForm);
         scaleTransition.setOnFinished(event -> {
             Parent root = null;
             try {
