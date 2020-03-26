@@ -66,4 +66,7 @@ public class ControllerLogin implements Initializable {
         scaleTransition.setByY(-1);
         scaleTransition.play();
     }
+    public void login(){
+        exit();
+    }
 }
