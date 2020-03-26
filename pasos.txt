@@ -1,0 +1,9 @@
+activar el servicio de sql
+	-servicios->MySQL80->iniciar servicio
+lanzar el servidor de maven
+	-si no está compilado->cmd(en la carpeta del proyecto): mvn clean compile
+	-cmd(en la carpeta del proyecto): mvn exec:java
+lanzar el ngrok
+	-Ejecutar ngrok.exe, hacer ngrok.exe http 8080
+	
+/myapp/query/select * from table1
