@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -8,38 +9,55 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="fondo" stylesheets="@../styles/ventana%20busq%20avanzada.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.scenes.VentanaBusqAvanzada">
+<AnchorPane fx:id="anchorpane" prefHeight="720.0" prefWidth="1280.0" styleClass="fondo" stylesheets="@../styles/ventanabusqavanzada.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controllers.ControllerVentanaBusqAvanzada">
    <children>
-      <HBox fx:id="hbox" alignment="CENTER_RIGHT" prefHeight="90.0" prefWidth="1280.0" spacing="4.0" styleClass="cabecera">
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-         <padding>
-            <Insets bottom="20.0" right="20.0" top="20.0" />
-         </padding>
+      <StackPane fx:id="panelsuperior" prefHeight="90.0" prefWidth="1280.0" styleClass="cabecera" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label fx:id="register1" onMouseClicked="#goTo" styleClass="letraguay" text="EVENT HUNTER" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
-            <Label fx:id="register" onMouseClicked="#goTo" styleClass="label1" text="Sign Up" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
-            <Separator orientation="VERTICAL" prefHeight="39.0" prefWidth="8.0">
-               <padding>
-                  <Insets left="2.0" />
-               </padding>
-            </Separator>
-            <Label fx:id="login" onMouseClicked="#goTo" styleClass="label1" text="Login" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
+            <HBox fx:id="hboxlog" alignment="CENTER_RIGHT" prefHeight="65.0" prefWidth="1269.0">
+               <children>
+                  <Label fx:id="login" styleClass="label1" text="Login" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets right="2.0" />
+                     </padding>
+                  </Label>
+                  <Separator orientation="VERTICAL" prefHeight="39.0" prefWidth="8.0">
+                     <padding>
+                        <Insets left="2.0" />
+                     </padding>
+                  </Separator>
+                  <Label fx:id="register" styleClass="label1" text="Sign Up" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="2.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <StackPane.margin>
+                  <Insets bottom="20.0" right="20.0" top="20.0" />
+               </StackPane.margin>
+            </HBox>
+            <HBox fx:id="hboxEH" alignment="CENTER_LEFT" prefHeight="90.0" prefWidth="391.0">
+               <StackPane.margin>
+                  <Insets left="20.0" />
+               </StackPane.margin>
+               <children>
+                  <Button fx:id="eventhunter" mnemonicParsing="false" onMouseClicked="#goTo">
+                     <graphic>
+                        <ImageView fx:id="eventhunter" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#goTo" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/logoletra.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
          </children>
-      </HBox>
+      </StackPane>
    </children>
 </AnchorPane>

@@ -7,8 +7,19 @@
     -fx-position: absolute;
 }
 .letraguay{
-    -fx-font-family: ROG Fonts;
     -fx-font-style: normal;
     -fx-font-weight: normal;
     -fx-font-size: 20px;
+}
+.button{
+    -fx-background-color: transparent;
+}
+.button:hover{
+    -fx-scale-x: 1.15;
+    -fx-scale-y: 1.15;
+}
+.label1:hover{
+    -fx-text-fill: #00FFE0;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
 }

@@ -13,9 +13,11 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import project.Main;
 
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -39,8 +41,11 @@ public class ControllerVentanaPrincipal implements Initializable{
             root = FXMLLoader.load(getClass().getResource("../scenes/Login.fxml"));
         }else if(node.getId().equals("register")){
             root = FXMLLoader.load(getClass().getResource("../scenes/Register.fxml"));
+        }else if(node.getId().equals("busqavanzada")){
+            root = FXMLLoader.load(getClass().getResource("../scenes/VentanaBusqAvanzada.fxml"));
         }
         Scene scene = new Scene(root, Main.stage.getScene().getWidth(), Main.stage.getScene().getHeight());
         Main.stage.setScene(scene);
     }
+
 }
