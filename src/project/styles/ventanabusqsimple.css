@@ -1,0 +1,27 @@
+.fondo{
+    -fx-background-color: #2D2D2D;
+    -fx-background-size: 100% 100%;
+}
+.cabecera{
+    -fx-background-color: #535353;
+    -fx-position: absolute;
+}
+.letracabecera{
+    font-family: 'ROG';
+    src: url('../../resources/ROGFontsv1.6-Regular.ttf');
+    -fx-font-style: normal;
+    -fx-font-weight: normal;
+    -fx-font-size: 20px;
+}
+.button{
+    -fx-background-color: transparent;
+}
+.button:hover{
+    -fx-scale-x: 1.15;
+    -fx-scale-y: 1.15;
+}
+.label1:hover{
+    -fx-text-fill: #00FFE0;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}

@@ -1,0 +1,14 @@
+.fondo{
+    -fx-background-color: #2D2D2D;
+    -fx-background-size: 100% 100%;
+}
+.cabecera{
+    -fx-background-color: #535353;
+    -fx-position: absolute;
+}
+.letraguay{
+    -fx-font-family: ROG Fonts;
+    -fx-font-style: normal;
+    -fx-font-weight: normal;
+    -fx-font-size: 20px;
+}
