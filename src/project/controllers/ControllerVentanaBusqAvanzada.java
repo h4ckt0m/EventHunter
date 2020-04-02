@@ -32,12 +32,14 @@ public class ControllerVentanaBusqAvanzada implements Initializable {
     public void goTo(MouseEvent event) throws Exception{
         Parent root = null;
         Node node = (Node) event.getSource();
-        if(node.getId().equals("eventhunter")){
+        if(node.getId().equals("login")){
+            root = FXMLLoader.load(getClass().getResource("../scenes/VentanaBusqAvanzadaLogin.fxml"));
+        }else if(node.getId().equals("register")){
+            root = FXMLLoader.load(getClass().getResource("../scenes/VentanaBusqAvanzadaRegister.fxml"));
+        }else if(node.getId().equals("eventhunter")){
             root = FXMLLoader.load(getClass().getResource("../scenes/Ventana Principal.fxml"));
         }
         Scene scene = new Scene(root, Main.stage.getScene().getWidth(), Main.stage.getScene().getHeight());
         Main.stage.setScene(scene);
     }
-
-
 }
