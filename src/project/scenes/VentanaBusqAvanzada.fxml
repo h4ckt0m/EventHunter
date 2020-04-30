@@ -55,5 +55,166 @@
             </Button>
          </children>
       </HBox>
+      <ScrollPane layoutY="76.0" prefHeight="644.0" prefWidth="450.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="76.0">
+         <content>
+            <VBox prefHeight="800.0" prefWidth="441.0">
+               <children>
+                  <Button mnemonicParsing="false" styleClass="botonbuscar" text="Realizar búsqueda" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Precio:" wrappingWidth="370.13671875">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="68.0" text="0 - 5 (€)">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="74.0" text="5 - 15 (€)">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="15 - 30 (€)">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="30+ (€)">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></CheckBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Edad permitida:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <CheckBox mnemonicParsing="false" text="-18">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="+18">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="+21">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></CheckBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Evento musical:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <CheckBox mnemonicParsing="false" text="Concierto">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="81.0" text="Discoteca">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Festival">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></CheckBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Evento deportivo:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <CheckBox mnemonicParsing="false" text="Equipo 1">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Equipo 2">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></CheckBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Evento cultural:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <CheckBox mnemonicParsing="false" text="Feria">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Convencion">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Gastronomico">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></CheckBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ambiente:">
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <CheckBox mnemonicParsing="false" text="Relajado">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Terraza">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></CheckBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Momento del dia:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <CheckBox mnemonicParsing="false" text="Mañana">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Mediodia">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Tarde">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Noche">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></CheckBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="450.0" layoutY="76.0" prefHeight="644.0" prefWidth="830.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+        </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

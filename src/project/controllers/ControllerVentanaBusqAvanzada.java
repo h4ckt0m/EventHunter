@@ -33,9 +33,9 @@ public class ControllerVentanaBusqAvanzada implements Initializable {
         Parent root = null;
         Node node = (Node) event.getSource();
         if(node.getId().equals("login")){
-            root = FXMLLoader.load(getClass().getResource("../scenes/VentanaBusqAvanzadaLogin.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../scenes/Login.fxml"));
         }else if(node.getId().equals("register")){
-            root = FXMLLoader.load(getClass().getResource("../scenes/VentanaBusqAvanzadaRegister.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../scenes/Register.fxml"));
         }else if(node.getId().equals("eventhunter")){
             root = FXMLLoader.load(getClass().getResource("../scenes/Ventana Principal.fxml"));
         }
