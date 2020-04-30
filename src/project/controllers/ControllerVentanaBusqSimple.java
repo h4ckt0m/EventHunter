@@ -12,12 +12,17 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import project.Main;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ControllerVentanaBusqSimple  implements Initializable {
+    @FXML
+    private VBox items = null;
+    public static int i;
     @FXML
     private AnchorPane anchorpane;
     @FXML
@@ -49,6 +54,19 @@ public class ControllerVentanaBusqSimple  implements Initializable {
         Cbox1.setItems(zonas);
         Cbox2.setValue("Seleccione el tipo de evento que desea:");
         Cbox2.setItems(tipos);
+            Node[] nodes = new Node[5];
+            for (int i = 0; i < nodes.length; i++) {
+                try {
+
+                    final int j = i;
+                    nodes[i] = FXMLLoader.load(getClass().getResource("../scenes/Evento.fxml"));
+
+                    items.getChildren().add(nodes[i]);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
     }
 
     public void goTo(MouseEvent event) throws Exception{
