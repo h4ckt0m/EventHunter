@@ -1,0 +1,32 @@
+ .panel1{
+ 	-fx-background-image: url("../../resources/hero.jpg");
+ 	-fx-background-size: 100% 100%;
+ }
+ .loginPane{
+    -fx-background-radius: 20px;
+    -fx-background-color: WHITE;
+ }
+ .textField{
+    -fx-background-color: transparent;
+ }
+ .button{
+    -fx-background-color: linear-gradient(to right, #332faa 0%, #f07bed 100%);
+    -fx-background-radius: 40px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.7), 4, 0, 0, 3);
+ }
+ .button:hover{
+    -fx-background-color: linear-gradient(to right, #e9f100 0%, #26eb01 100%);
+ }
+ .button:pressed{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0), 0, 0, 0, 0);
+    -fx-translate-y: 4px;
+ }
+ .exit{
+    -fx-border-color: transparent;
+    -fx-border-width: 2;
+ }
+ .exit:hover{
+    -fx-border-color: gray;
+    -fx-scale-x:1.2;
+    -fx-scale-y:1.2;
+ }

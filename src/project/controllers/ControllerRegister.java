@@ -1,16 +1,12 @@
 package project.controllers;
 
-import javafx.animation.FadeTransition;
 import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 import project.Main;
@@ -55,7 +51,7 @@ public class ControllerRegister implements Initializable {
         scaleTransition.setOnFinished(event -> {
             Parent root = null;
             try {
-                root = FXMLLoader.load(getClass().getResource("../scenes/Ventana Principal.fxml"));
+                root = FXMLLoader.load(getClass().getResource("../scenes/VentanaPrincipal.fxml"));
                 Scene scene = new Scene(root, tx*2, ty*2);
                 Main.stage.setScene(scene);
             } catch (IOException e) {

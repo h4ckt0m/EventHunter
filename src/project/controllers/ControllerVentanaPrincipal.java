@@ -39,8 +39,10 @@ public class ControllerVentanaPrincipal implements Initializable{
             root = FXMLLoader.load(getClass().getResource("../scenes/Login.fxml"));
         }else if(node.getId().equals("register")){
             root = FXMLLoader.load(getClass().getResource("../scenes/Register.fxml"));
-        }else if(node.getId().equals("busqSimple")){
+        }else if(node.getId().equals("searchsimple")){
             root = FXMLLoader.load(getClass().getResource("../scenes/VentanaBusqSimple.fxml"));
+        }else if(node.getId().equals("searchadvance")){
+            root = FXMLLoader.load(getClass().getResource("../scenes/VentanaBusqAvanzada.fxml"));
         }
         Scene scene = new Scene(root, Main.stage.getScene().getWidth(), Main.stage.getScene().getHeight());
         Main.stage.setScene(scene);

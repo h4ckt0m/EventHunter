@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="panel1" stylesheets="@../styles/scrollprofile.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controllers.ControllerScrollProfile">
+    <children>
+        <HBox fx:id="hbox" alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="1280.0" spacing="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <padding>
+                <Insets bottom="20.0" right="20.0" top="20.0" />
+            </padding>
+            <children>
+            <Button mnemonicParsing="false" onMouseClicked="#prof" styleClass="profile">
+               <graphic>
+                      <ImageView fx:id="profile" fitHeight="51.0" fitWidth="51.0" styleClass="profile">
+                          <image>
+                              <Image url="@../../resources/profile.png" />
+                          </image>
+                      </ImageView>
+               </graphic>
+            </Button>
+            </children>
+        </HBox>
+        <VBox alignment="TOP_CENTER" layoutX="72.0" layoutY="70.0" prefHeight="650.0" prefWidth="1208.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+            <padding>
+                <Insets top="10.0" />
+            </padding>
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" text="EVENT HUNTER" textFill="WHITE">
+                    <font>
+                        <Font name="ROGFonts-Regular" size="48.0" />
+                    </font>
+                </Label>
+                <Label text="Find the perfect event for you." textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <HBox alignment="BOTTOM_CENTER" prefHeight="169.0" prefWidth="1280.0" spacing="10.0">
+                    <children>
+                        <TextField prefHeight="40.0" prefWidth="350.0" promptText="Search here..." styleClass="TextField">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="30.0" />
+                            </HBox.margin>
+                        </TextField>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="lupa">
+                            <image>
+                                <Image url="@../../resources/lupa.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" />
+                    </padding>
+                </HBox>
+                <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" styleClass="advsearch" text="Advanced Search" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+      <VBox fx:id="scrollProf" alignment="TOP_CENTER" layoutX="970.0" layoutY="92.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="277.0" prefWidth="268.0" styleClass="profilePane" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="92.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="47.0" prefWidth="145.0" text="EventHunter1">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="40.0" prefWidth="268.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="185.0" text="eventhunter1@gmail.com" textFill="#797979">
+                     <HBox.margin>
+                        <Insets left="40.0" right="40.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Italic" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <Line endX="100.0" startX="-166.5" />
+            <HBox prefHeight="46.0" prefWidth="268.0">
+               <children>
+                  <ImageView fitHeight="28.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="20.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../../resources/myprofile.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="myprofile" onMouseClicked="#goTo" prefHeight="46.0" prefWidth="195.0" styleClass="myprofile" text="Mi perfil">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <Line endX="100.0" startX="-170.0" />
+            <HBox fx:id="myevents" alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="268.0">
+               <children>
+                  <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets bottom="8.0" left="20.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../../resources/calendar.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="myevents" onMouseClicked="#goTo" prefHeight="46.0" prefWidth="195.0" styleClass="myevents" text="Mis eventos">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="7.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <Line endX="100.0" startX="-174.0" />
+            <Button fx:id="logout" mnemonicParsing="false" onMouseClicked="#goTo" prefHeight="41.0" prefWidth="116.0" styleClass="logout" text="Cerrar Sesión" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>

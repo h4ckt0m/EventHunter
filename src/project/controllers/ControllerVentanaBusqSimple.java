@@ -73,7 +73,7 @@ public class ControllerVentanaBusqSimple  implements Initializable {
         Parent root = null;
         Node node = (Node) event.getSource();
         if(node.getId().equals("logo")){
-            root = FXMLLoader.load(getClass().getResource("../scenes/Ventana Principal.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../scenes/VentanaPrincipal.fxml"));
         }else if(node.getId().equals("login")){
             root = FXMLLoader.load(getClass().getResource("../scenes/Login.fxml"));
         }else if(node.getId().equals("register")){
