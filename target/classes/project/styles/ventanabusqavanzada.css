@@ -1,0 +1,37 @@
+.fondo{
+    -fx-background-color: #2D2D2D;
+    -fx-background-size: 100% 100%;
+}
+.cabecera{
+    -fx-background-color: #535353;
+    -fx-position: absolute;
+}
+.letraguay{
+    -fx-font-style: normal;
+    -fx-font-weight: normal;
+    -fx-font-size: 20px;
+}
+.button{
+    -fx-background-color: transparent;
+}
+.button:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+.label1:hover{
+    -fx-text-fill: #00FFE0;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+.scroll-pane > .viewport {
+    -fx-background-color: #D8D8D8;
+}
+.botonbuscar {
+    -fx-background-color: #009d9d;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.7), 4, 0, 0, 3);
+    -fx-background-radius   : 20px;
+}
+.botonbuscar:pressed{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0), 0, 0, 0, 0);
+    -fx-translate-y: 4px;
+}
