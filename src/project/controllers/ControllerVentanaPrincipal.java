@@ -13,14 +13,13 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import project.App;
 import project.Main;
 
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ResourceBundle;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.*;
 
 public class ControllerVentanaPrincipal implements Initializable{
     @FXML
@@ -30,6 +29,10 @@ public class ControllerVentanaPrincipal implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        HashMap<String, String> resp = App.request("select * from evento");
+        App.stringToArray(resp.get("data"));
+        String respuesta = resp.toString();
+        System.out.println(respuesta);
     }
 
     public void goTo(MouseEvent event) throws Exception{

@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="fondo" stylesheets="@../styles/ventanabusqsimple.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controllers.ControllerVentanaBusqSimple">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="fondo" stylesheets="@../styles/ventanabusqsimple.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controllers.ControllerVentanaBusqSimple">
     <children>
         <HBox fx:id="hbox" alignment="CENTER_RIGHT" layoutX="196.0" prefHeight="90.0" prefWidth="1280.0" spacing="4.0" styleClass="cabecera" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <opaqueInsets>
@@ -60,48 +60,54 @@
       </HBox>
       <HBox fx:id="opciones" alignment="CENTER_LEFT" layoutY="90.0" prefHeight="100.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
          <children>
-            <DatePicker>
+            <DatePicker fx:id="Cbox0">
                <HBox.margin>
                   <Insets left="50.0" right="10.0" />
                </HBox.margin>
             </DatePicker>
-            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../resources/calendar.png" />
-               </image>
-               <HBox.margin>
-                  <Insets right="200.0" />
-               </HBox.margin>
-            </ImageView>
+            <Button fx:id="boton0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#busqueda" text="Button">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/calendar2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
             <ComboBox fx:id="Cbox1" prefHeight="25.0" prefWidth="200.0">
                <HBox.margin>
-                  <Insets right="10.0" />
+                  <Insets left="150.0" right="10.0" />
                </HBox.margin></ComboBox>
-            <ImageView fitHeight="71.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../resources/city.png" />
-               </image>
-               <HBox.margin>
-                  <Insets right="200.0" />
-               </HBox.margin>
-            </ImageView>
+            <Button fx:id="boton1" alignment="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#busqueda" text="Button">
+               <graphic>
+                  <ImageView fitHeight="71.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/city.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
             <ComboBox fx:id="Cbox2" prefHeight="25.0" prefWidth="264.0">
                <HBox.margin>
-                  <Insets right="10.0" />
+                  <Insets left="150.0" right="10.0" />
                </HBox.margin>
             </ComboBox>
-            <ImageView fitHeight="46.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../resources/conference.png" />
-               </image>
-            </ImageView>
+            <Button fx:id="boton2" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#busqueda" text="Button">
+               <graphic>
+                  <ImageView fitHeight="46.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/conference.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </HBox>
-      <Pane layoutX="287.0" layoutY="190.0" prefHeight="530.0" prefWidth="706.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="287.0" AnchorPane.rightAnchor="287.0" AnchorPane.topAnchor="190.0">
+      <Pane layoutX="287.0" layoutY="190.0" prefHeight="530.0" prefWidth="760.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="287.0" AnchorPane.rightAnchor="287.0" AnchorPane.topAnchor="190.0">
          <children>
-            <ScrollPane prefHeight="530.0" prefWidth="706.0">
+            <ScrollPane fx:id="Spanel" prefHeight="530.0" prefWidth="718.0">
                <content>
-                  <VBox fx:id="items" prefHeight="530.0" prefWidth="709.0" styleClass="fondo" />
+                  <VBox fx:id="items" prefHeight="530.0" prefWidth="700.0" styleClass="fondo" />
                </content>
             </ScrollPane>
          </children>

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="269.0" prefWidth="776.0" styleClass="fondo" stylesheets="@../styles/evento.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="269.0" prefWidth="765.0" styleClass="fondo" stylesheets="@../styles/evento.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controllers.ControllerEvento">
    <children>
       <Label fx:id="titulo" prefHeight="53.0" prefWidth="954.0" text="Titulo de Evento" textFill="WHITE">
          <font>
@@ -51,7 +51,7 @@
             </VBox>
             <VBox alignment="TOP_CENTER" prefHeight="158.0" prefWidth="207.0" styleClass="border" stylesheets="@../styles/evento.css">
                <children>
-                  <Button fx:id="Inscrib" contentDisplay="CENTER" mnemonicParsing="false">
+                  <Button fx:id="Inscrib" contentDisplay="CENTER" mnemonicParsing="false" styleClass="label1">
                      <graphic>
                         <ImageView fitHeight="100.0" fitWidth="100.0">
                            <image>
