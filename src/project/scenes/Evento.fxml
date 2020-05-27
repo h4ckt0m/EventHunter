@@ -51,7 +51,7 @@
             </VBox>
             <VBox alignment="TOP_CENTER" prefHeight="158.0" prefWidth="207.0" styleClass="border" stylesheets="@../styles/evento.css">
                <children>
-                  <Button fx:id="Inscrib" contentDisplay="CENTER" mnemonicParsing="false" styleClass="label1">
+                  <Button fx:id="inscrib" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#enrol" styleClass="label1">
                      <graphic>
                         <ImageView fitHeight="100.0" fitWidth="100.0">
                            <image>

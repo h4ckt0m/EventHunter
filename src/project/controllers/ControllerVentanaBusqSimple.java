@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.ScrollPane;
@@ -41,6 +42,8 @@ public class ControllerVentanaBusqSimple  implements Initializable {
     private ComboBox Cbox2;
     @FXML
     private ScrollPane Spanel;
+    @FXML
+    private Button inscrib;
 
 
 
@@ -61,9 +64,9 @@ public class ControllerVentanaBusqSimple  implements Initializable {
             );
     ObservableList<String> tipos =
             FXCollections.observableArrayList(
-                    "Evento deportivo",
-                    "Evento musical",
-                    "Evento cultural"
+                    "eventoDeportivo",
+                    "eventoMusical",
+                    "eventoCultural"
             );
 
     @Override
@@ -87,7 +90,6 @@ public class ControllerVentanaBusqSimple  implements Initializable {
                     e.printStackTrace();
                 }
             }
-
     }
 
 
@@ -100,12 +102,6 @@ public class ControllerVentanaBusqSimple  implements Initializable {
             root = FXMLLoader.load(getClass().getResource("../scenes/Login.fxml"));
         }else if(node.getId().equals("register")){
             root = FXMLLoader.load(getClass().getResource("../scenes/Register.fxml"));
-        }else if(node.getId().equals("boton0")){
-            System.out.println(Cbox0.getValue());
-        }else if(node.getId().equals("boton1")){
-            System.out.println(Cbox1.getValue());
-        }else if(node.getId().equals("boton2")){
-            System.out.println(Cbox2.getValue());
         }
         Scene scene = new Scene(root, Main.stage.getScene().getWidth(), Main.stage.getScene().getHeight());
         Main.stage.setScene(scene);
@@ -124,6 +120,21 @@ public class ControllerVentanaBusqSimple  implements Initializable {
                 System.out.println("Nada ha cambiado");
                 return;
             }
+            items.getChildren().clear();
+            resp = App.request("select * from evento where fecha LIKE '%"+fecha+"%'");
+            A = App.stringToArray(resp.get("data"));
+            int size = A.get(1).size();
+            System.out.println(size);
+            Node[] nodes = new Node[size];
+            for (i = 0 ; i < size; i++) {
+                try {
+                    consulta = (ArrayList<String>) A.get(1).get(i);
+                    nodes[i] = FXMLLoader.load(getClass().getResource("../scenes/Evento.fxml"));
+                    items.getChildren().add(nodes[i]);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
             System.out.println("La fecha es: " + fecha);
             busqueda = "select * from evento where fecha like '"+fecha+"%'";
             System.out.println(busqueda);
@@ -133,6 +144,20 @@ public class ControllerVentanaBusqSimple  implements Initializable {
                 System.out.println("Nada ha cambiado");
                 return;
             }
+            items.getChildren().clear();
+            resp = App.request("select * from evento where zona = '"+zona+"'");
+            A = App.stringToArray(resp.get("data"));
+            int size = A.get(1).size();
+            Node[] nodes = new Node[size];
+            for (i = 0 ; i < size; i++) {
+                try {
+                    consulta = (ArrayList<String>) A.get(1).get(i);
+                    nodes[i] = FXMLLoader.load(getClass().getResource("../scenes/Evento.fxml"));
+                    items.getChildren().add(nodes[i]);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
             System.out.println("La zona es: " + zona);
         }else if(node.getId().equals("boton2")){
             String tipo = Cbox2.getValue().toString();
@@ -140,9 +165,22 @@ public class ControllerVentanaBusqSimple  implements Initializable {
                 System.out.println("Nada ha cambiado");
                 return;
             }
+            items.getChildren().clear();
+            resp = App.request("select * from evento where genero = '"+tipo+"'");
+            A = App.stringToArray(resp.get("data"));
+            int size = A.get(1).size();
+            Node[] nodes = new Node[size];
+            for (i = 0 ; i < size; i++) {
+                try {
+                    consulta = (ArrayList<String>) A.get(1).get(i);
+                    nodes[i] = FXMLLoader.load(getClass().getResource("../scenes/Evento.fxml"));
+                    items.getChildren().add(nodes[i]);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
             System.out.println("El tipo de evento es: " + tipo);
         }
     }
-
 }
 

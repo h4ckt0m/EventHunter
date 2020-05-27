@@ -3,13 +3,18 @@ package project.controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import project.App;
 
 import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 
@@ -24,7 +29,7 @@ public class ControllerEvento extends ControllerVentanaBusqSimple implements Ini
     @FXML
     private Label precio;
     @FXML
-    private Button Inscrib;
+    public Button inscrib;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -42,6 +47,14 @@ public class ControllerEvento extends ControllerVentanaBusqSimple implements Ini
         direccion.setText(consulta.get(1));
         fecha.setText(consulta.get(2));
         precio.setText(consulta.get(5) + "€");
-        Inscrib.setId(String.valueOf(ControllerVentanaBusqSimple.i));
+        inscrib.setId(String.valueOf(ControllerVentanaBusqSimple.i));
+    }
+
+    public void enrol(MouseEvent event) throws Exception{
+        System.out.println("entro1");
+        Node node = (Node) event.getSource();
+        if(node.getId().equals("inscrib")){
+            System.out.println("node.getId()");
+        }
     }
 }
