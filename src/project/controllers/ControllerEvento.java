@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import project.App;
+import project.Main;
 
 import java.net.URL;
 import java.time.LocalDateTime;
@@ -18,7 +19,7 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 
-public class ControllerEvento extends ControllerVentanaBusqSimple implements Initializable{
+public class ControllerEvento implements Initializable{
 
     @FXML
     private Label titulo;
@@ -29,7 +30,7 @@ public class ControllerEvento extends ControllerVentanaBusqSimple implements Ini
     @FXML
     private Label precio;
     @FXML
-    public Button inscrib;
+    private Button inscrib;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -43,18 +44,24 @@ public class ControllerEvento extends ControllerVentanaBusqSimple implements Ini
         //ArrayList<ArrayList> A = App.stringToArray(resp.get("data"));
         //System.out.println(A.get(1).get(0));
         //ArrayList<String> e1 = (ArrayList<String>) A.get(1).get(0);
-        titulo.setText(consulta.get(0));
-        direccion.setText(consulta.get(1));
-        fecha.setText(consulta.get(2));
-        precio.setText(consulta.get(5) + "€");
+        titulo.setText(Main.consulta.get(0));
+        direccion.setText(Main.consulta.get(1));
+        fecha.setText(Main.consulta.get(2));
+        precio.setText(Main.consulta.get(5) + "€");
         inscrib.setId(String.valueOf(ControllerVentanaBusqSimple.i));
     }
 
     public void enrol(MouseEvent event) throws Exception{
-        System.out.println("entro1");
-        Node node = (Node) event.getSource();
-        if(node.getId().equals("inscrib")){
-            System.out.println("node.getId()");
-        }
+        LocalDateTime ldt = LocalDateTime.now().plusDays(0);
+        ArrayList<String> temp = (ArrayList<String>) Main.loggeduser.get(1).get(0);
+        String nombre = temp.get(0);
+        System.out.println("Te usuario "+nombre+" se incribe al evento: ");
+        System.out.println("| Nombre de evento: "+titulo.getText()+"| En la direccion: "+direccion.getText()+"| Se celebra: "+fecha.getText()+"| Te apuntaste el: "+ldt);
+        /*App.request("Insert into APUNTA (NOMBREUSUARIO,NOMBREEVENTO,DIRECCION,FECHA,FECHAAPUNTADO) " +
+                "values ('nomUsu1','Partido Futbol Real Madrid - Barsa','Avda. de Concha Espina, 1'" +
+                ",TO_DATE('2020-03-17 09:00:00', 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2020-03-10 09:00:00'," +
+                " 'YYYY-MM-DD HH24:MI:SS'))");
+                
+         */
     }
 }

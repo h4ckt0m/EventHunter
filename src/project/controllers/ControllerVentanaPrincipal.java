@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
@@ -16,6 +17,7 @@ import javafx.scene.layout.VBox;
 import project.App;
 import project.Main;
 
+import java.awt.*;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.URL;
@@ -26,6 +28,8 @@ public class ControllerVentanaPrincipal implements Initializable{
     private AnchorPane anchorpane;
     @FXML
     private HBox hbox;
+    @FXML
+    private TextField nombusq;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -43,6 +47,7 @@ public class ControllerVentanaPrincipal implements Initializable{
         }else if(node.getId().equals("register")){
             root = FXMLLoader.load(getClass().getResource("../scenes/Register.fxml"));
         }else if(node.getId().equals("searchsimple")){
+            Main.nombusq = nombusq.getText();
             root = FXMLLoader.load(getClass().getResource("../scenes/VentanaBusqSimple.fxml"));
         }else if(node.getId().equals("searchadvance")){
             root = FXMLLoader.load(getClass().getResource("../scenes/VentanaBusqAvanzada.fxml"));

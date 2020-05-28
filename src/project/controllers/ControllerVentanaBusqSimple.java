@@ -46,13 +46,7 @@ public class ControllerVentanaBusqSimple  implements Initializable {
     private Button inscrib;
 
 
-
-    public static String busqueda;
     public static int i;
-
-    public static HashMap<String, String> resp = App.request("select * from evento");
-    public static ArrayList<ArrayList> A = App.stringToArray(resp.get("data"));
-    public static ArrayList<String> consulta;
 
     ObservableList<String> zonas =
             FXCollections.observableArrayList(
@@ -71,7 +65,7 @@ public class ControllerVentanaBusqSimple  implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        System.out.println(Main.nombusq);
         Date date = new Date();
         LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
         Cbox0.setValue(localDate.minusDays(0));
@@ -79,11 +73,13 @@ public class ControllerVentanaBusqSimple  implements Initializable {
         Cbox1.setItems(zonas);
         Cbox2.setValue("Seleccione el tipo de evento que desea:");
         Cbox2.setItems(tipos);
-        int size = A.get(1).size();
+        Main.resp = App.request("select * from evento where nombreevento LIKE '%"+Main.nombusq+"%'");
+        Main.A = App.stringToArray(Main.resp.get("data"));
+        int size = Main.A.get(1).size();
         Node[] nodes = new Node[size];
             for (i = 0 ; i < size; i++) {
                 try {
-                    consulta = (ArrayList<String>) A.get(1).get(i);
+                    Main.consulta = (ArrayList<String>) Main.A.get(1).get(i);
                     nodes[i] = FXMLLoader.load(getClass().getResource("../scenes/Evento.fxml"));
                     items.getChildren().add(nodes[i]);
                 } catch (IOException e) {
@@ -111,24 +107,16 @@ public class ControllerVentanaBusqSimple  implements Initializable {
 
         Node node = (Node) event.getSource();
         if(node.getId().equals("boton0")){
-            LocalDateTime ldt = LocalDateTime.now().plusDays(0);
-            DateTimeFormatter formmat1 = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.GERMANY);
-            String formatter = formmat1.format(ldt);
-            System.out.println(formatter);
-            String fecha = Cbox0.getValue().toString();
-            if (fecha.equals(formatter)) {
-                System.out.println("Nada ha cambiado");
-                return;
-            }
+            LocalDate fecha = Cbox0.getValue();
             items.getChildren().clear();
-            resp = App.request("select * from evento where fecha LIKE '%"+fecha+"%'");
-            A = App.stringToArray(resp.get("data"));
-            int size = A.get(1).size();
+            Main.resp = App.request("SELECT * FROM evento WHERE TO_CHAR(fecha,'yyyy-mm-dd') LIKE '"+fecha+"%'");
+            Main.A = App.stringToArray(Main.resp.get("data"));
+            int size = Main.A.get(1).size();
             System.out.println(size);
             Node[] nodes = new Node[size];
             for (i = 0 ; i < size; i++) {
                 try {
-                    consulta = (ArrayList<String>) A.get(1).get(i);
+                    Main.consulta = (ArrayList<String>) Main.A.get(1).get(i);
                     nodes[i] = FXMLLoader.load(getClass().getResource("../scenes/Evento.fxml"));
                     items.getChildren().add(nodes[i]);
                 } catch (IOException e) {
@@ -136,50 +124,45 @@ public class ControllerVentanaBusqSimple  implements Initializable {
                 }
             }
             System.out.println("La fecha es: " + fecha);
-            busqueda = "select * from evento where fecha like '"+fecha+"%'";
-            System.out.println(busqueda);
         }else if(node.getId().equals("boton1")){
             String zona = Cbox1.getValue().toString();
             if (zona.equals("Seleccione la zona que desea:")) {
-                System.out.println("Nada ha cambiado");
                 return;
             }
             items.getChildren().clear();
-            resp = App.request("select * from evento where zona = '"+zona+"'");
-            A = App.stringToArray(resp.get("data"));
-            int size = A.get(1).size();
+            Main.resp = App.request("select * from evento where zona = '"+zona+"'");
+            Main.A = App.stringToArray(Main.resp.get("data"));
+            int size = Main.A.get(1).size();
             Node[] nodes = new Node[size];
             for (i = 0 ; i < size; i++) {
                 try {
-                    consulta = (ArrayList<String>) A.get(1).get(i);
+                    Main.consulta = (ArrayList<String>) Main.A.get(1).get(i);
                     nodes[i] = FXMLLoader.load(getClass().getResource("../scenes/Evento.fxml"));
                     items.getChildren().add(nodes[i]);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
-            System.out.println("La zona es: " + zona);
+
         }else if(node.getId().equals("boton2")){
             String tipo = Cbox2.getValue().toString();
             if (tipo.equals("Seleccione el tipo de evento que desea:")) {
-                System.out.println("Nada ha cambiado");
                 return;
             }
             items.getChildren().clear();
-            resp = App.request("select * from evento where genero = '"+tipo+"'");
-            A = App.stringToArray(resp.get("data"));
-            int size = A.get(1).size();
+            Main.resp = App.request("select * from evento where genero = '"+tipo+"'");
+            Main.A = App.stringToArray(Main.resp.get("data"));
+            int size = Main.A.get(1).size();
             Node[] nodes = new Node[size];
             for (i = 0 ; i < size; i++) {
                 try {
-                    consulta = (ArrayList<String>) A.get(1).get(i);
+                    Main.consulta = (ArrayList<String>) Main.A.get(1).get(i);
                     nodes[i] = FXMLLoader.load(getClass().getResource("../scenes/Evento.fxml"));
                     items.getChildren().add(nodes[i]);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
-            System.out.println("El tipo de evento es: " + tipo);
         }
     }
 }

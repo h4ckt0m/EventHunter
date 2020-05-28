@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="panel1" stylesheets="@../styles/ventanaprincipal.css" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controllers.ControllerVentanaPrincipal">
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="panel1" stylesheets="@../styles/ventanaprincipal.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controllers.ControllerVentanaPrincipal">
    <children>
       <HBox fx:id="hbox" alignment="CENTER_RIGHT" prefHeight="90.0" prefWidth="1280.0" spacing="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -52,7 +52,7 @@
             </Label>
             <HBox alignment="BOTTOM_CENTER" prefHeight="169.0" prefWidth="1280.0" spacing="10.0">
                <children>
-                  <TextField prefHeight="40.0" prefWidth="350.0" promptText="Search here..." styleClass="TextField">
+                  <TextField fx:id="nombusq" prefHeight="40.0" prefWidth="350.0" promptText="Search here..." styleClass="TextField">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font></TextField>
