@@ -25,7 +25,7 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.*;
 
-public class ControllerVentanaBusqSimple  implements Initializable {
+public class ControllerVentanaBusqSimpleLog  implements Initializable {
     @FXML
     private VBox items = null;
     @FXML
@@ -91,11 +91,9 @@ public class ControllerVentanaBusqSimple  implements Initializable {
         Parent root = null;
         Node node = (Node) event.getSource();
         if(node.getId().equals("logo")){
-            root = FXMLLoader.load(getClass().getResource("../scenes/VentanaPrincipal.fxml"));
-        }else if(node.getId().equals("login")){
-            root = FXMLLoader.load(getClass().getResource("../scenes/Login.fxml"));
-        }else if(node.getId().equals("register")){
-            root = FXMLLoader.load(getClass().getResource("../scenes/Register.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../scenes/Logged.fxml"));
+        }else if(node.getId().equals("profile")){
+            root = FXMLLoader.load(getClass().getResource("../scenes/ScrollProfile.fxml"));
         }
         Scene scene = new Scene(root, Main.stage.getScene().getWidth(), Main.stage.getScene().getHeight());
         Main.stage.setScene(scene);

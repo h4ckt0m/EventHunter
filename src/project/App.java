@@ -35,10 +35,14 @@ public class App {
         }
         String key = "";
         String value = "";
+        String key2 = "exito";
+        String value2 = "false";
+
         if (jsonNode.at("/items/0/statementType").asText().equals("query")) {
             //System.out.println("this is a query");
             key = "data";
             value = jsonNode.at("/items/0/resultSet/items").toString();
+            value2 = "true";
         } else {
             if (jsonNode.at("/items/0/result").toString().equals("0")) {
                 //System.out.println("this is a command with error");
@@ -49,9 +53,11 @@ public class App {
                 //System.out.println("this is a command without error");
                 key = "info";
                 value = jsonNode.at("/items/0/response/0").asText();
+                value2 = "true";
             }
         }
         resp.put(key,value);
+        resp.put(key2,value2);
         return resp;
     }
 

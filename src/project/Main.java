@@ -14,8 +14,8 @@ public class Main extends Application {
     public static Stage stage;
     public static ArrayList<ArrayList> loggeduser;
     public static String nombusq;
+    public static String estoylogueado = "no";
 
-    public static String busqueda;
     public static HashMap<String, String> resp = App.request("select * from evento");
     public static ArrayList<ArrayList> A = App.stringToArray(resp.get("data"));
     public static ArrayList<String> consulta;

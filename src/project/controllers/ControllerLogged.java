@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
@@ -21,6 +22,8 @@ public class ControllerLogged implements Initializable {
     private AnchorPane anchorpane;
     @FXML
     private HBox hbox;
+    @FXML
+    private TextField nombusq;
 
 
 
@@ -34,7 +37,9 @@ public class ControllerLogged implements Initializable {
         if(node.getId().equals("profile")){
             root = FXMLLoader.load(getClass().getResource("../scenes/ScrollProfile.fxml"));
         }else if(node.getId().equals("searchsimple")){
-            root = FXMLLoader.load(getClass().getResource("../scenes/VentanaBusqSimple.fxml"));
+            Main.estoylogueado="si";
+            Main.nombusq = nombusq.getText();
+            root = FXMLLoader.load(getClass().getResource("../scenes/VentanaBusqSimpleLog.fxml"));
         }else if(node.getId().equals("searchadvance")){
             root = FXMLLoader.load(getClass().getResource("../scenes/VentanaBusqAvanzada.fxml"));
         }

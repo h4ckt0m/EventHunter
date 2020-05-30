@@ -33,7 +33,7 @@ public class ControllerVentanaPrincipal implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        HashMap<String, String> resp = App.request("select * from evento");
+        HashMap<String, String> resp = App.request("select * from apunta");
         App.stringToArray(resp.get("data"));
         String respuesta = resp.toString();
         System.out.println(respuesta);
@@ -47,6 +47,7 @@ public class ControllerVentanaPrincipal implements Initializable{
         }else if(node.getId().equals("register")){
             root = FXMLLoader.load(getClass().getResource("../scenes/Register.fxml"));
         }else if(node.getId().equals("searchsimple")){
+            Main.estoylogueado="no";
             Main.nombusq = nombusq.getText();
             root = FXMLLoader.load(getClass().getResource("../scenes/VentanaBusqSimple.fxml"));
         }else if(node.getId().equals("searchadvance")){

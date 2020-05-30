@@ -6,11 +6,10 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox minHeight="260.0" minWidth="100.0" prefHeight="260.0" prefWidth="1000.0" spacing="1.0" styleClass="fondo" stylesheets="@../styles/evento.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controllers.ControllerEvento">
+<VBox minHeight="260.0" minWidth="100.0" prefHeight="260.0" prefWidth="1000.0" styleClass="fondo" stylesheets="@../styles/evento.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controllers.ControllerEvento">
    <children>
       <Label fx:id="titulo" prefHeight="53.0" prefWidth="954.0" text="Titulo de Evento" textFill="WHITE">
          <font>
@@ -20,7 +19,7 @@
             <Insets left="20.0" />
          </padding>
       </Label>
-      <Label fx:id="direccion" layoutX="10.0" layoutY="10.0" prefHeight="53.0" prefWidth="868.0" text="Direccion" textFill="WHITE">
+      <Label fx:id="direccion" layoutX="10.0" layoutY="10.0" prefHeight="53.0" prefWidth="847.0" text="Direccion" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
@@ -28,29 +27,31 @@
             <Insets left="20.0" />
          </padding>
       </Label>
-      <HBox alignment="CENTER_RIGHT" prefHeight="134.0" prefWidth="700.0">
+      <HBox alignment="CENTER_RIGHT" prefHeight="158.0" prefWidth="723.0">
          <children>
-            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="107.0" prefWidth="888.0">
+            <VBox prefHeight="135.0" prefWidth="787.0">
                <children>
-                  <Label fx:id="fecha" prefHeight="53.0" prefWidth="611.0" text="Fecha" textFill="WHITE">
+                  <Label fx:id="fecha" prefHeight="53.0" prefWidth="673.0" text="Fecha" textFill="WHITE">
                      <font>
                         <Font size="24.0" />
                      </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
                   </Label>
                   <Label fx:id="precio" prefHeight="53.0" prefWidth="628.0" text="Precio" textFill="WHITE">
                      <font>
                         <Font size="24.0" />
                      </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
                   </Label>
                </children>
-               <padding>
-                  <Insets left="20.0" />
-               </padding>
             </VBox>
-            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="159.0" prefWidth="112.0" styleClass="border" stylesheets="@../styles/evento.css">
+            <VBox alignment="TOP_CENTER" prefHeight="158.0" prefWidth="207.0" styleClass="border" stylesheets="@../styles/evento.css">
                <children>
-                  <Button fx:id="inscrib" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#inscribirse" styleClass="label1">
+                  <Button fx:id="Inscrib" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#inscribirse" styleClass="label1">
                      <graphic>
                         <ImageView fitHeight="100.0" fitWidth="100.0">
                            <image>
@@ -59,15 +60,12 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Label alignment="TOP_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="172.0" text="Inscribirse" textFill="WHITE">
+                  <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="53.0" prefWidth="172.0" text="Inscribirse" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
                </children>
-               <padding>
-                  <Insets right="5.0" />
-               </padding>
             </VBox>
          </children>
       </HBox>
