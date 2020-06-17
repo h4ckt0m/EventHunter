@@ -1,4 +1,6 @@
  #                                 EventHunter
+ 
+Enlace al instalador: https://github.com/10GGGGGGGGGG/Event-Hunter-Desktop
 
 ## Description 
 
